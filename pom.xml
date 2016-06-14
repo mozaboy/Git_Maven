@@ -26,5 +26,6 @@
     <module>wuqing-book-domain</module>
     <module>wuqing-book-dao</module>
     <module>wuqing-book-service</module>
+    <module>wuqing-book-web</module>
   </modules>
 </project>

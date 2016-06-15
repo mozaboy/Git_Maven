@@ -1,10 +1,27 @@
-maven 多模块项目
+maven 多模块项目 git 测试项目
 
-git 测试项目
+笔记：
+1.新建父级项目wuqing_book
+  mvn archetype:create -DgroupId=com.wuqing.book -DartifactId=wuqing_book
+  修改该项目的pom文件中的打包方式： jar---> packaging
+  不然下面不能新建子项目。
 
+2.进入wuqing_book
+  新建子项目，执行：
+  mvn archetype:generate -DgroupId=com.wuqing.book -DartifactId=wuqing-book-domain -DarchetypeArtifactId=maven-archetype-quickstart
+  mvn archetype:generate -DgroupId=com.wuqing.book -DartifactId=wuqing-book-dao -DarchetypeArtifactId=maven-archetype-quickstart
+  mvn archetype:generate -DgroupId=com.wuqing.book -DartifactId=wuqing-book-service -DarchetypeArtifactId=maven-archetype-quickstart
 
-练习一下
+3.git提交
+  进入git bash here
+  进入指定文件夹 cd wuqing_book
+  初始化为git库  git init
+  添加readMe文件 touch readMe
+                 vim readMe 编辑它
+  添加文件到git库 git add *
+  提交到git库   git commit -m '提交文件'
+  添加到远程git仓库 git remote add origin https://github.com/mozaboy/Git_Maven.git
+  提交到远程git库  git push origin master
+  这一步需要输入gitHub的用户名和密码
 
-
-
-多看书 ， 多学习
+完成
